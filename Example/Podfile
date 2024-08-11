@@ -1,4 +1,6 @@
-use_frameworks!
+# use_frameworks!
+# 以动态库加载framework
+# 不使用就以static libraires方式
 
 platform :ios, '10.0'
 

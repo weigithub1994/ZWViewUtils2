@@ -7,8 +7,11 @@
 //
 
 #import "ZWViewController.h"
+#import <ZWViewUtils/UIView+Layout.h>
 
 @interface ZWViewController ()
+
+@property (nonatomic, strong) UIView *testView;
 
 @end
 
@@ -17,13 +20,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.view.backgroundColor = [UIColor whiteColor];
+    _testView = [UIView new];
+    [self.view addSubview:self.testView];
+    self.testView.backgroundColor = [UIColor redColor];
+    self.testView
+        .setWidth(100.f)
+        .setHeight(100.f)
+        .setCenterX(self.view.width / 2)
+        .setCenterY(self.view.height / 2);
 }
 
 @end
