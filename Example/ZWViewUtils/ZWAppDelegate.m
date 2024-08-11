@@ -7,12 +7,17 @@
 //
 
 #import "ZWAppDelegate.h"
+#import "ZWViewController.h"
 
 @implementation ZWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [UIWindow new];
+    self.window.rootViewController = [ZWViewController new];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
