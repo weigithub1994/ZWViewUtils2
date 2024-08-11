@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ZWViewUtils_Example' do
+  pod 'ZWViewUtils', :path => '../'
+
+  target 'ZWViewUtils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
